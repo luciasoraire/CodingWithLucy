@@ -1,0 +1,100 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Lobster", sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+.first {
+  background-image: url(./../img/food1.png);
+}
+
+.second {
+  background-image: url(./../img/food2.png);
+}
+
+.third {
+  background-image: url(./../img/food3.png);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #302f2e;
+}
+
+.card-container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transition: 0.3s ease;
+}
+
+.background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-size: 350px;
+  background-position: center;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: 0.3s ease;
+}
+
+.card:hover .background {
+  transform: scale(1.15) translateZ(0);
+  background-size: 300px;
+}
+
+.card-container:hover .card:not(:hover) {
+  transform: scale(0.9);
+}
+
+.card-container:hover .card:not(:hover) .card-title {
+  opacity: 1;
+}
+
+.card-container:hover > .card:not(:hover) .background {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-title {
+  color: #efebe5;
+  font-size: 25px;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.9);
+  opacity: 0;
+}
+
+.card:hover .card-title {
+  opacity: 0;
+}
