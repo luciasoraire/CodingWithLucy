@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #cff24e;
+  font-family: "Lobster", sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1.5px solid #302f2e;
+  background-color: #efebe5;
+}
+
+.container .imageBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container .imageBox img {
+  width: 100%;
+}
+
+.container .content {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: url(./../img/back.png);
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border: solid #302f2e;
+  border-width: 1.5px 1.5px 1.5px 0;
+  border-radius: 30px;
+  transform-origin: left;
+  transition: 0.5s;
+  transform: perspective(600px) rotateY(90deg);
+}
+
+.container .content h1 {
+  margin: 10px 0;
+  padding: 0;
+  color: #302f2e;
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+
+.container .content p {
+  margin: 0;
+  color: #302f2e;
+  text-align: justify;
+  font-size: 9px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+.container:hover .content {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.container:hover .imageBox {
+  transform: perspective(600px) translateX(50%);
+}
