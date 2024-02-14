@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #1b37b2, #cef14e);
+  font-family: "Poppins", sans-serif;
+}
+
+.login {
+  text-align: center;
+  width: 350px;
+  box-sizing: border-box;
+  padding: 40px;
+  background-color: #efebe5;
+  border-radius: 20px;
+}
+
+.login h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #302f2e;
+}
+
+.login .input {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.login .input input {
+  height: 50px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+  font-family: inherit;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.login .input span {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 0;
+  transition: 0.5s;
+  pointer-events: none;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.login .input input:focus ~ span,
+.login .input input:valid ~ span {
+  top: -12px;
+  left: 20px;
+  background-color: #efebe5;
+  font-size: 12px;
+  padding: 2px 4px;
+  background-color: #cef14e;
+  border-radius: 10px;
+}
+
+button {
+  width: 9em;
+  height: 3em;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+button::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #cef14e 0%, #bde235 100%);
+  transition: 0.5s ease;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 9em;
+}
+
+.login a {
+  color: #302f2e;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
+
+.login a span {
+  color: #302f2e;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 12px;
+}
